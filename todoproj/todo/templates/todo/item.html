@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%extends 'todo/base.html'%}
+{%load crispy_forms_tags%}
+{%block child_block%}
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a href="/"><h1>Todo Application</h1></a>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" style="margin:5% 25%">
+            <div class="card card-body h-100">
+              <img src="{{tasks.img.url}}" width="100%">
+            <h3>{{tasks.task}}
+            <br>
+            <small class="text-muted">{{tasks.desc}}</small></h3>
+              <a id="c" type="button" class="btn btn-danger" href="../../delete/{{tasks.id}}/">Completed</a>
+            </div>
+        </div>
+    </div>
+            </div>
+{%endblock%}
